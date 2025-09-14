@@ -1,3 +1,6 @@
+import { useState } from "react"
+import ExtensionCard from "./components/ExtensionCard"
+
 export type Extension = {
   logo: string
   name: string
@@ -7,10 +10,15 @@ export type Extension = {
 
 
 const App = () => {
-  return (
-    <div>
+  const [extensions, setExtensions] = useState<Extension[]>([])
 
-    </div>
+  return (
+    <main>
+      <section className="kartya">
+        {extensions.map((extension) => <ExtensionCard {...extension}/>)}
+      </section>
+
+    </main>
   )
 }
 
