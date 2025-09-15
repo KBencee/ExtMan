@@ -7,7 +7,7 @@ const ExtensionCard = (props: Extension) => {
         <img src={props.logo} alt=""/>
         <h4 className="name">{props.name}</h4>
         <p className="description">{props.description}</p>
-        <button className="activateBtn">{props.isactive}</button>
+        <button className="activateBtn">{props.isActive}</button>
 
     </div>
   )

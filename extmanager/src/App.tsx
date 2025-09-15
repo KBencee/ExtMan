@@ -1,23 +1,30 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ExtensionCard from "./components/ExtensionCard"
+import { getExtensions } from "./components/services/ExtensionServices"
 
 export type Extension = {
-  logo: string
-  name: string
-  description: string
-  isactive: boolean
+  logo: string,
+  name: string,
+  description: string,
+  isActive: boolean
 }
-
 
 const App = () => {
   const [extensions, setExtensions] = useState<Extension[]>([])
 
+  useEffect(() => {
+    getExtensions().then (data => {
+      setExtensions(data)
+    })
+  }, [])
+
   return (
     <main>
-      <section className="kartya">
-        {extensions.map((extension) => <ExtensionCard {...extension}/>)}
+      <section className="kartya-grid">
+        {extensions.map((extension) => 
+          <ExtensionCard {...extension} />
+        )}
       </section>
-
     </main>
   )
 }
