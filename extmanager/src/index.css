@@ -3,6 +3,53 @@
   --sotetHatter: linear-gradient(180deg, #040918 0%, #091540 100%);
 }
 
+@font-face {
+  font-family: myFont;
+  src: url(public/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf);
+}
+
 body{
   background-color: var(--vilagosHatter);
+  margin: 100px;
+  font-family: myFont;
+}
+
+.kartya-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+
+  .extensionCard{
+      height: 80%;
+      border-radius: 25px;
+      border: 1px solid gainsboro;
+      padding: 20px;
+
+      img{
+        float: left;
+        margin: 0px 20px 10px 10px;
+      }
+
+      h3{
+        margin: auto;
+        font-weight: 700;
+      }
+      p{
+        margin-bottom: 50px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+  }
+
+}
+
+.activateBtn{
+  float: right;
+}
+
+.removeBtn{
+  border-radius: 15px;
+  border: 1px solid gainsboro;
+  padding: 5px;
+  width: 80px;
 }
