@@ -10,8 +10,31 @@
 
 body{
   background-color: var(--vilagosHatter);
-  margin: 100px;
+  margin: 40px 200px 40px 200px;
   font-family: myFont;
+}
+
+.header1{
+  border: 1px solid gainsboro;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 20px;
+  vertical-align: top;
+
+  button{
+    float: right;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    padding: 5px;
+    margin-top: 10px;
+  }
+}
+
+.navbar-buttons{
+  float: right;
+  margin: 20px;
+  vertical-align: top;
+  gap: 20px;
 }
 
 .kartya-grid{

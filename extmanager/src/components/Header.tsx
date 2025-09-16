@@ -1,13 +1,12 @@
 const Header = () => {
   return (
-    <>
-        <div className="header">
-        <img src="./assets/images/logo.svg" alt="logo"/>
+        <div className="header1">
+          <p>
+            <img src="public/assets/images/logo.svg" alt="logo"/>
+            <button className="modeBtn">b</button>
+          </p>
+        
         </div> 
-        <div>
-            <button className="modeBtn"></button>
-        </div>
-    </>
   )
 }
 
